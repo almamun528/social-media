@@ -9,8 +9,9 @@ const displayAllUsers = (getUsers)=>{
   document.querySelector(".all-posts").innerHTML = ""
   document.querySelector(".all-videos").innerHTML =""
 
+
   getUsers.forEach((user) => {
-    const { profile_picture, profile_name, verified } = user.authors[0];
+    const { profile_picture, profile_name, verified,video_id} = user.authors[0];
     //create div for each user
     const div = document.createElement("div")
     div.innerHTML = `
@@ -27,9 +28,29 @@ const displayAllUsers = (getUsers)=>{
 
     addFriendRequest = (button) =>{
       button.innerText ="Request Sent"
+      //!Create Element and append To notification center.
+      const notificationContainer = document.querySelector(".all-notifications")
+      const div = document.createElement("div")
+      div.innerHTML = `
+  
+          <p> You Sent Friend Request wait for Response</p>
+      `;
+      notificationContainer.appendChild(div)
+
     }
+
+    // ? Remove Button
     removeRequest = (button) =>{
-      document.querySelector(".addBtn").innerText ="Add Friend"
+      
+      button.parentNode.querySelector(".addBtn").innerText ="Add Friend"
+      const notificationContainer = document.querySelector(".all-notifications")
+      const div = document.createElement("div")
+      div.innerHTML = `
+  
+          <p> You Remove Friend Request </p>
+      `
+      notificationContainer.appendChild(div)
+
     }
   });
 }

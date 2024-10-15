@@ -31,7 +31,7 @@
                 <i class="fa-solid fa-house" onclick="loadAllPostFromJsonApi()"></i>
                 <i class="fa-solid fa-users" onclick="loadAllUsers()"></i>
                 <i class="fa-brands fa-youtube" onclick="  loadAllVideos()"></i>
-                <i class="fa-solid fa-bell relative">
+                <i class="fa-solid fa-bell relative" onclick="notificationBox()">
                     <span class="notificationIcon">0</span>
                 </i>
             </nav>
@@ -75,7 +75,11 @@
         <section class="all-notifications p-3">
         
             <!-- All Post will come from displayAllPostDataIntoHomepage() function -->
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, soluta.</p>
+            <p class="text-center font-semibold text-gray-500">This Is Notification Areas</p>
+
+            <div id="notification-box">
+
+            </div>
 
         </section>
 
