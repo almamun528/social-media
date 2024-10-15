@@ -9,24 +9,48 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<style>
+    .notificationIcon{
+        font-size: 15px;
+        position: absolute;
+        background-color: brown;
+        padding: 5px;
+        color: white;
+        top: -10px;
+        left: 10;
+        border-radius: 50%;
+    }
+</style>
 </head>
 
 <body">
-    <main class="max-w-[476px] bg-gray-100">
+    <main class="max-w-[476px] mx-auto bg-gray-100">
 
         <header class="bg-gray-300 sticky top-0">
             <nav class="text-2xl flex gap-3 justify-evenly py-5">
                 <i class="fa-solid fa-house" onclick="loadAllPostFromJsonApi()"></i>
-                <i class="fa-solid fa-users"></i>
+                <i class="fa-solid fa-users" onclick="loadAllUsers()"></i>
                 <i class="fa-brands fa-youtube" onclick="  loadAllVideos()"></i>
-                <i class="fa-solid fa-store"></i>
+                <i class="fa-solid fa-bell relative">
+                    <span class="notificationIcon">0</span>
+                </i>
             </nav>
         </header>
         
         <section class="all-posts ">
         
-            <!-- All Post will come from displayAllPostDataIntoHomepage() function -->
+            <div class="topPart w-11/12 mx-auto mt-3 flex items-center gap-2">
+                <div class="left">
+                 <img class="rounded-full" src="./image/profile.jpg" alt="">
+                </div>
+                <div class="right w-full">
+                    <input class="p-2 w-full rounded-full" type="text" placeholder="What's on your Mind?">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <!-- All Post
+              will come from displayAllPostDataIntoHomepage() function -->
        
         </section>
 
@@ -36,17 +60,31 @@
 
         </section>
 
-        <section class="all-users ">
+        <section class="all-users grid grid-cols-2 my-2">
         
             <!-- All Post will come from displayAllPostDataIntoHomepage() function -->
+
+
+        </section>
+
+        <section class="all-users grid grid-cols-2 my-2">
+        
+            <!-- All Post will come from displayAllUsers() function -->
+        </section>
+
+        <section class="all-notifications p-3">
+        
+            <!-- All Post will come from displayAllPostDataIntoHomepage() function -->
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, soluta.</p>
 
         </section>
 
 
-        
+    
     </main>
     <script src="./load-post.js"></script>
     <script src="./video.js"></script>
     <script src="./all-users.js"></script>
+    <script src="./notification.js"></script>
 </body>
 </html>
