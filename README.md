@@ -23,3 +23,6 @@ Example: https://openapi.programming-hero.com/api/phero-tube/video/aaac
 
 JSON Placeholder Api for post 
 https://jsonplaceholder.typicode.com/posts
+
+
+live link : https://almamun528.github.io/social-media/ 
