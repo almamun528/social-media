@@ -12,14 +12,14 @@
 
 </head>
 
-<body class="bg-gray-100">
-    <main class="max-w-[476px]">
+<body">
+    <main class="max-w-[476px] bg-gray-100">
 
         <header class="bg-gray-300 sticky top-0">
             <nav class="text-2xl flex gap-3 justify-evenly py-5">
                 <i class="fa-solid fa-house" onclick="loadAllPostFromJsonApi()"></i>
                 <i class="fa-solid fa-users"></i>
-                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-youtube" onclick="  loadAllVideos()"></i>
                 <i class="fa-solid fa-store"></i>
             </nav>
         </header>
@@ -29,8 +29,24 @@
             <!-- All Post will come from displayAllPostDataIntoHomepage() function -->
        
         </section>
+
+        <section class="all-videos ">
+        
+            <!-- All Post will come from displayAllPostDataIntoHomepage() function -->
+
+        </section>
+
+        <section class="all-users ">
+        
+            <!-- All Post will come from displayAllPostDataIntoHomepage() function -->
+
+        </section>
+
+
         
     </main>
-    <script src="./load-data.js"></script>
+    <script src="./load-post.js"></script>
+    <script src="./video.js"></script>
+    <script src="./all-users.js"></script>
 </body>
 </html>

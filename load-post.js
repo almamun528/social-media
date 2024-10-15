@@ -9,6 +9,7 @@ const displayAllPostDataIntoHomepage = (posts)=>{
 
     posts.forEach((post) => {
         const {userId,title,body,id} = post
+        
         const div = document.createElement("div")
         div.classList.add('shadow' ,'p-4', 'm-3', 'rounded-md')
         div.innerHTML =`
@@ -16,6 +17,7 @@ const displayAllPostDataIntoHomepage = (posts)=>{
             <p class="text-sm"> <span class="font-semibold">Post:</span> ${body}</p>
         `;
         postContainer.appendChild(div)
+
     });
 }
 loadAllPostFromJsonApi()
